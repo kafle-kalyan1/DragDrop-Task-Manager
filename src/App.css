@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 10%;
+  background-color: rgb(224, 224, 224);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-rows: repeat(4, 350px);
+  grid-auto-rows: minmax((400px, auto));
+  grid-gap: 1em;
+  height: 100%;
+  background-color: rgb(224, 224, 224);
+}
+
+.border {
+  border: 1px black solid;
+  height: 350px;
+}
+
+.showComplete,
+.showProgress,
+.showAll {
+  font-size: 25px;
+  float: left;
+  margin-right: 10px;
+}
+
+.showComplete:hover,
+.showProgress:hover,
+.showAll:hover {
+  display: inline-block;
+  border-radius: 5px;
+  line-height: 25px;
+  transition: all 0.4s;
+  background-color: rgba(255, 255, 255, 0.726);
+}
+
+.showComplete:hover::after,
+.showProgress:hover::after,
+.showAll:hover::after {
+  content: " Show Completed Tasks ";
+  position: absolute;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.726);
+  top: 65px;
+  left: 10px;
+}
+
+.showProgress:hover::after {
+  content: "Show In Progress Tasks";
+}
+
+.showAll:hover::after {
+  content: " Show All Tasks ";
+}

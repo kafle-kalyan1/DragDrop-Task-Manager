@@ -1,0 +1,98 @@
+.notesWrapper {
+  padding: 30px;
+}
+
+.notesWrapper .dragging {
+  opacity: 0.5;
+}
+
+.notes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.note {
+  border-radius: 8px;
+  width: 280px;
+  margin: 0 10px 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.note__header {
+  padding: 10px 16px 0;
+}
+
+.note__close,
+.note__check {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 24px;
+  text-align: center;
+  transition: all 0.3s;
+  float: right;
+}
+
+.note__check {
+  float: left;
+}
+
+.note__close:hover,
+.note__check:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.note__title {
+  font-size: 24px;
+  outline: 0;
+  padding: 10px 16px 0;
+}
+
+.input__title,
+.input__body {
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 24px;
+  outline: 0;
+}
+.input__body {
+  height: 150px;
+  font-size: 20px;
+}
+
+.note__body {
+  outline: 0;
+  font-size: 20px;
+  padding: 10px 16px 16px;
+}
+
+.note:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.new__note {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.todo {
+  background-color: rgb(255, 255, 92);
+}
+
+.inprogress {
+  background-color: #ff9f31;
+}
+
+.complete {
+  background-color: rgb(81, 255, 133);
+}
